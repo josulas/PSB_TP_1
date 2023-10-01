@@ -1,0 +1,23 @@
+{
+    // Name this configuration
+    "name": "PSB",
+    // Use the base codespace image
+    "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+  
+    "remoteUser": "codespace",
+    "overrideCommand": false,
+    // Add the IDs of extensions you want installed when the container is created.
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.copilot"
+            ]
+        },
+        "codespaces": {
+            "openFiles": [
+                "PSB_TP_1.ipynb"
+            ]
+        }
+    },
+    "postCreateCommand": "py -m pip install numpy matplotlib scipy nptyping"
+  }
